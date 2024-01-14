@@ -6,35 +6,16 @@
 /*   By: gvalles- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:01:20 by gvalles-          #+#    #+#             */
-/*   Updated: 2023/09/14 18:12:54 by gvalles-         ###   ########.fr       */
+/*   Updated: 2024/01/14 17:44:17 by gvalles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdio.h>
 
-int ft_isprint(char *str)
+int ft_isprint(int c)
 {
-	if (*str == '\0')
-	{	
-		return (0);
-	}
-	while (*str)
-	{
-		if (*str >= 32 && *str <= 126)
-		{	
+		if (c >= 32 && c <= 126)
 			return (1);
-		}	
-			str++;
-	}
+		else
 			return (0);
 }
-
-int main ()
-{
-  char str[] = " ";
-  ft_isprint(str);
-  printf("%d", ft_isprint(str));
-    return 0;
-}
-

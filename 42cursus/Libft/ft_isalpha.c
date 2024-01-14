@@ -6,34 +6,18 @@
 /*   By: gvalles- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 13:10:10 by gvalles-          #+#    #+#             */
-/*   Updated: 2023/09/14 12:04:38 by gvalles-         ###   ########.fr       */
+/*   Updated: 2024/01/14 17:05:20 by gvalles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-int	ft_isalpha(char *str)
+int	ft_isalpha(int c)
 {
-	if (*str == '\0')
-	{	
-		return (0);
-	}
-	while (*str)
-	{
-		if ((*str >= 'a' && *str <= 'z') || (*str >= 'A' && *str <= 'Z'))
-		{	
+		if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		{
 			return (1);
-		}	
-			str++;
-	}
+		else
 			return (0);
-}	
-
-int main ()
-{
-  char str[] = "Hola, mamaguevo";
-  ft_isalpha(str);
-  printf("%d", ft_isalpha(str));
-    return 0;
 }
