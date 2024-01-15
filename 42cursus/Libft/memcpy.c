@@ -3,43 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   memcpy.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gvalles- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gvalles- <gvalles-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 17:59:29 by gvalles-          #+#    #+#             */
-/*   Updated: 2023/09/15 20:16:25 by gvalles-         ###   ########.fr       */
+/*   Updated: 2024/01/15 22:50:23 by gvalles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-void* memcpy(void* destination, const void* source, size_t num)
+void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-    char* dest = (char*)destination;
-    const char* src = (const char*)source;
-    size_t i = 0;
-
-    while (i < num)
+    size_t contar = 0;
+    while (contar < n)
     {
-        dest[i] = src[i];
-        i++;
+        ((unsigned char *)dst)[contar] = ((unsigned char *)src)[contar];
+        contar++;
     }
-
-    return destination;
+    return (dst);
 }
-
-int main()
-{
-    char str1[] = "Geeks";
-    char str2[] = "Quiz";
-
-    printf("str1 antes de memcpy\n");
-    printf("%s\n", str1);
-
-    // Copia el contenido de str2 a str1 utilizando memcpy y un bucle while
-    memcpy(str1, str2, sizeof(str2));
-
-    printf("\nstr1 después de memcpy\n");
-    printf("%s\n", str1);
-
-    return 0;

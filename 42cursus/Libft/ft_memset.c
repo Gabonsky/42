@@ -1,11 +1,13 @@
 #include <unistd.h>
 #include <stdio.h>
 
-void *ft_menset(void *string, int c, size_t len)
+void *ft_menset(void *s, int c, size_t len)
 {
-	size_t i;
+	size_t	i;
+	unsigned char	*s;
 
 	i = 0;
+	
 	while (i < len)
 	{
 		*((unsigned char *)string + i) = (unsigned char)c;
