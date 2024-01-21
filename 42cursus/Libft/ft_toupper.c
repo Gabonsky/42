@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gvalles- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 20:08:36 by gvalles-          #+#    #+#             */
-/*   Updated: 2023/09/14 21:32:19 by gvalles-         ###   ########.fr       */
+/*   Created: 2024/01/21 17:21:33 by gvalles-          #+#    #+#             */
+/*   Updated: 2024/01/21 17:21:45 by gvalles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdio.h>
+#include <ctype.h>
 
-int	ft_strlen(char *str)
+int ft_toupper(int c)
 {
-	int	i;
-
-	i = 0;
-	while (*str != '\0')
-	{
-		i++;
-		str++;
-	}
-	return (i);
+        if (c >= 'a' && c <= 'z')
+                c = c -32;
+        return (c);                
 }
 
-int main()
-{
-   char str[] = "Hola mamaguevo";
-   int length = ft_strlen(str);
-   printf("El número de caracteres en el string es: %d\n", length);
-   return 0;
-}
+/*  int main() {
+    char c = 'm';
+    printf("%c -> %c\n", c, toupper(c)); // Imprimirá: m -> M
+
+    c = 'D';
+    printf("%c -> %c\n", c, toupper(c)); // Imprimirá: D -> D
+
+    c = '9';
+    printf("%c -> %c\n", c, toupper(c)); // Imprimirá: 9 -> 9
+
+    return 0;
+} */

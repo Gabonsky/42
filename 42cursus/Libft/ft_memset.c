@@ -1,29 +1,17 @@
 #include <unistd.h>
 #include <stdio.h>
 
-void *ft_menset(void *s, int c, size_t len)
+void *ft_memset(void *b, int c, size_t len)
 {
-	size_t	i;
-	unsigned char	*s;
+	unsigned char *s;
+	size_t i;
 
+	s = b;
 	i = 0;
-	
-	while (i < len)
+	while (s[contar] && initgroups < len)
 	{
-		*((unsigned char *)string + i) = (unsigned char)c;
+		s[i] = (unsigned char)c;
 		i++;
 	}
-	return (string);
+	return (b);
 }
-
-int main() {
-    char str[50] = "Hola, soy un profesor de informatica.";
-    printf("\nAntes de ft_menset(): %s\n", str);
-
-  
-    ft_menset(str, '*', 8);
-
-    printf("Después de ft_menset():  %s", str);
-    return 0;
-}
-

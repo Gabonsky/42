@@ -16,7 +16,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int				cont;
+	size_t				contar;
 	unsigned char	*str;
 
 	str = s;
@@ -27,25 +27,3 @@ void	ft_bzero(void *s, size_t n)
 		cont++;
 	}
 }
-
-/*int main ()
-{
-	char str1[50] = "Pizza_de_caraotas";
-	char str2[50] = "Hamburguesa_de_lapa";
-	printf("%s" , "-----------Datos----------" );
-	printf("%c", '\n');
-	printf("%s" , str1);
-	printf("%c", '\n');
-	printf("%s" , str2);
-	printf("%c", '\n');
-	printf("%s" , "----------Resultado de la funcion base----------");
-	printf("%c", '\n');
-	bzero(str1, 5);
-	printf("%s" , str1);
-	printf("%c", '\n');
-	printf("%s" , "-----------Resultado de mi funciòn-------------");
-	printf("%c", '\n');
-	ft_bzero(str2, 5);
-	printf("%s" , str2);
-	printf("%c", '\n');
-}*/

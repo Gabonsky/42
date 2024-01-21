@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memmove (void *str1, const void *str2, size_t n)
+void *ft_memmove (void *dst, const void *src, size_t len)
 {
 	char	*s;
 	char	*d;
@@ -29,15 +29,7 @@ void *ft_memmove (void *str1, const void *str2, size_t n)
 		{
 			d[len - 1] = s[len -1];
 			len--;
-		}	
-	}	
-		
-		
-		
-		while (i < len)
-		{
-			d[i] = [i];
-			i++;
 		}
-	return (dst);
-}	
+	}
+	return (d);
+}
