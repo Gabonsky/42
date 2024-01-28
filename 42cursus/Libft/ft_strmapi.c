@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gvalles- <gvalles-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/25 13:58:39 by gvalles-          #+#    #+#             */
-/*   Updated: 2024/01/25 16:00:18 by gvalles-         ###   ########.fr       */
+/*   Created: 2024/01/21 13:22:06 by gvalles-          #+#    #+#             */
+/*   Updated: 2024/01/21 13:22:42 by gvalles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_tolower (int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-        if (c >= 'A' && c <= 'Z')
-            c = c + 32;
-        return (c);
+	char	*str;
+	size_t	i;
+
+	str = ft_strdup(s);
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (str[i])
+	{
+		str[i] = (*f)(i, str[i]);
+		i++;
+	}
+	return (str);
 }

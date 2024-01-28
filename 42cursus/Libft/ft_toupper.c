@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gvalles- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gvalles- <gvalles-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/21 17:21:33 by gvalles-          #+#    #+#             */
-/*   Updated: 2024/01/21 17:21:45 by gvalles-         ###   ########.fr       */
+/*   Created: 2024/01/24 14:56:31 by gvalles-          #+#    #+#             */
+/*   Updated: 2024/01/24 14:57:57 by gvalles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
 int ft_toupper(int c)
 {
@@ -32,3 +31,4 @@ int ft_toupper(int c)
 
     return 0;
 } */
+

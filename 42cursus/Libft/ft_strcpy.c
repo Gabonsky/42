@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gvalles- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gvalles- <gvalles-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 21:12:33 by gvalles-          #+#    #+#             */
 /*   Updated: 2023/09/15 21:13:01 by gvalles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	<unistd.h>
+#include "libft.h"
 
 char	*ft_strcpy(char *dest, const char *src)
 {

@@ -1,31 +1,35 @@
-LIB = ar rcs
+NAME = libft.a
+
+
 RM = rm -f
 
+
 CC = gcc
-CCFLAGS = -Wall -Wextra -Werror
-
-NAME = libft.a
-SRC = $(wildcard ft_*.c)
-OBJ = $(SRC:.c=.o)
-INCLUDE = libft.h
-
-BONUSSRC = $(wildcard ft_*.c) 
 
 
-all: $(NAME)
+CFLAGS = -Wall -Wextra -Werror
 
-$(NAME): $(OBJ) $(INCLUDE)
-	$(LIB) $(NAME) $(OBJ)
+SRCs = ft_isalnum.c \
+	   ft_isalpha.c \
+	   ft_isdigit.c \
+	   ft_isascii.c \
+	   ft_isprint.c \
 
-%.o: %.c
-	$(CC) $(CCFLAGS) -c -o $@ $<
+OBJs = $(SRCs:.c=.o)
 
-clean:
-	$(RM) $(OBJ)
+all : $(NAME)
 
-fclean: clean
+$(NAME) : $(OBJs)
+	ar rcs $(NAME) $(OBJs)
+
+$.o : %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean :
+	$(RM) $(OBJs)
+
+fclean :
 	$(RM) $(NAME)
 
-re: fclean all
+re : fclean all
 
-rebonus: fclean bonus

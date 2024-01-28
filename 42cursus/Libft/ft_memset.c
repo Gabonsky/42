@@ -1,14 +1,13 @@
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
-void *ft_memset(void *b, int c, size_t len)
+void *ft_menset(void *b, int c, size_t len)
 {
-	unsigned char *s;
-	size_t i;
+	size_t	i;
+	unsigned char	*s;
 
-	s = b;
 	i = 0;
-	while (s[contar] && initgroups < len)
+	s = b;
+	while (s[i] && i < len)
 	{
 		s[i] = (unsigned char)c;
 		i++;
