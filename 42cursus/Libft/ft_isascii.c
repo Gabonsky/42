@@ -6,16 +6,16 @@
 /*   By: gvalles- <gvalles-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 17:44:54 by gvalles-          #+#    #+#             */
-/*   Updated: 2024/01/14 17:40:00 by gvalles-         ###   ########.fr       */
+/*   Updated: 2024/01/28 12:36:48 by gvalles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int isascii(int c)
+int	isascii(int c)
 {
-		if (c >= 0 && c <= 127)	
-			return (1);
-		else
-			return (0);
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
 }

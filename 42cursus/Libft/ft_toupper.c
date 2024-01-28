@@ -6,19 +6,18 @@
 /*   By: gvalles- <gvalles-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 14:56:31 by gvalles-          #+#    #+#             */
-/*   Updated: 2024/01/24 14:57:57 by gvalles-         ###   ########.fr       */
+/*   Updated: 2024/01/28 13:10:03 by gvalles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-        if (c >= 'a' && c <= 'z')
-                c = c -32;
-        return (c);                
+	if (c >= 'a' && c <= 'z')
+		c = c -32;
+	return (c);
 }
-
 /*  int main() {
     char c = 'm';
     printf("%c -> %c\n", c, toupper(c)); // Imprimirá: m -> M
@@ -31,4 +30,3 @@ int ft_toupper(int c)
 
     return 0;
 } */
-
